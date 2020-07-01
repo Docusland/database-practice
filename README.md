@@ -5,7 +5,7 @@
 **3) Affichez les pays dont la date d'indépendance est inférieur à l'an 1900 et n'est pas null**  
 **4) Affichez le nombre de pays dans le monde**  
 **5) Affichez le pays avec la plus petite superficie**  
-**6) Affichez le nombre moyen d'habitants par ville**  
+**6) Affichez le nombre moyen d'habitants pour toute ville confondue**  
 **7) Affichez le nom et la densité des pays (population/surface) rangées par ordre décroissant de densité**  
 **8) Insérer une nouvelle ville avec :**  
 
