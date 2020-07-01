@@ -15,7 +15,7 @@ Select name from city where countryCode='FRA';
 ```
 **3) Affichez les pays dont la date d'indépendance est inférieur à l'an 1900 et n'est pas null**  
 ```sql
-select * from country where IndepYear < 1900 AND NOT NULL;
+select * from country where IndepYear < 1900 AND IndepYear IS NOT NULL;
 -- 43
 ```
 
@@ -93,4 +93,5 @@ Select Country.code, Country.population as 'Country Pop', Cities.population as '
 FROM
 (SELECT code, sum(city.population) as population FROM country, city where city.countryCode = country.code group by code) Cities
 RIGHT JOIN Country on ( Country.code = Difference.code)
+-- 239 enregistrements
 ```
