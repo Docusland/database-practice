@@ -92,6 +92,11 @@ And countrylanguage.Language = 'English'
 Select Country.code, Country.population as 'Country Pop', Cities.population as 'City Pop',  Country.population - Cities.population as 'Difference Pop'
 FROM
 (SELECT code, sum(city.population) as population FROM country, city where city.countryCode = country.code group by code) Cities
-RIGHT JOIN Country on ( Country.code = Difference.code)
+RIGHT JOIN Country on ( Country.code = Cities.code)
 -- 239 enregistrements
+```
+
+ou 
+```sql
+SELECT (country.population - sum(city.population)) as difference FROM city inner join country on country.code = city.countryCode group by countryCode;
 ```
