@@ -25,6 +25,7 @@ select count(*) from country;
 -- 239
 ```
 **5) Affichez le pays avec la plus petite superficie**  
+<<<<<<< HEAD
 ```sql
 SELECT * FROM country WHERE SurfaceArea = (SELECT MIN(SurfaceArea) FROM country);
 
@@ -37,6 +38,9 @@ SELECT AVG(Population) FROM country;
 -- 350468
 ``` 
 
+=======
+**6) Affichez le nombre moyen d'habitants pour toute ville confondue**  
+>>>>>>> 497e154176200cb704ffed92849ec59b1f83e5f3
 **7) Affichez le nom et la densité des pays (population/surface) rangées par ordre décroissant de densité**  
 
 ```sql
@@ -70,6 +74,7 @@ DELETE FROM city WHERE name = 'Campinas'
 - Population
 - Percentage (en tant que le pourcentage de personne parlant ce language)
 
+<<<<<<< HEAD
 ```sql
 SELECT city.NAME, country.Name as 'CountryName', country.Code, countrylanguage.Percentage, city.Population FROM country, countrylanguage, city WHERE country.Code = countrylanguage.CountryCode AND city.CountryCode = country.Code AND countrylanguage.isOfficial = "T" And countrylanguage.Language = 'English' 
 ```
@@ -93,3 +98,6 @@ FROM
 (SELECT code, sum(city.population) as population FROM country, city where city.countryCode = country.code group by code) Cities
 RIGHT JOIN Country on ( Country.code = Difference.code)
 ```
+=======
+**11) Affichez la différence entre la somme des populations listée dans les villes par rapport à la population annoncée dans le pays**  
+>>>>>>> 497e154176200cb704ffed92849ec59b1f83e5f3
