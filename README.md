@@ -34,8 +34,7 @@ SELECT Name from world.country ORDER BY SurfaceArea ASC LIMIT 1;
 
 **6) Affichez le nombre moyen d'habitants pour toute ville confondue**  
 ```sql
-SELECT AVG(Population) FROM country;
--- 350468
+SELECT AVG(Population) FROM city;
 ``` 
 
 **7) Affichez le nom et la densité des pays (population/surface) rangées par ordre décroissant de densité**  
